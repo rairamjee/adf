@@ -1,0 +1,27 @@
+{
+	"name": "customer_Consolidated_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Customer.csv",
+				"folderPath": "customer-details",
+				"container": "consolidated-folder"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

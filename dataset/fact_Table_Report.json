@@ -1,0 +1,19 @@
+{
+	"name": "fact_Table_Report",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "report",
+			"table": "fact-details-customer-order"
+		}
+	}
+}

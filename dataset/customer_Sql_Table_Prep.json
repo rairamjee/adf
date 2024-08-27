@@ -1,0 +1,19 @@
+{
+	"name": "customer_Sql_Table_Prep",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "prep",
+			"table": "customer-details"
+		}
+	}
+}

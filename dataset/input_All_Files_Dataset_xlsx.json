@@ -1,0 +1,53 @@
+{
+	"name": "input_All_Files_Dataset_xlsx",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_blob_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "question1",
+				"container": "input"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "OrderID",
+				"type": "String"
+			},
+			{
+				"name": "ProductID",
+				"type": "String"
+			},
+			{
+				"name": "ProductName",
+				"type": "String"
+			},
+			{
+				"name": "Quantity",
+				"type": "String"
+			},
+			{
+				"name": "OrderTimestamp",
+				"type": "String"
+			},
+			{
+				"name": "Price",
+				"type": "String"
+			},
+			{
+				"name": "CustomerID",
+				"type": "String"
+			}
+		]
+	}
+}

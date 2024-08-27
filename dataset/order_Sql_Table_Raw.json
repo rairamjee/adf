@@ -1,0 +1,19 @@
+{
+	"name": "order_Sql_Table_Raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_storage",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "raw",
+			"table": "order_dataset"
+		}
+	}
+}

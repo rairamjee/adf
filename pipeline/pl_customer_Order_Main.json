@@ -1,0 +1,73 @@
+{
+	"name": "pl_customer_Order_Main",
+	"properties": {
+		"activities": [
+			{
+				"name": "pl_Customer_Order_Prep",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "pl_Customer_Order_Raw",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_Customer_Order_Prep",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "pl_Customer_Order_Raw",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_Customer_Order_Raw",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "pl_Customer_Order_Report",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "pl_Customer_Order_Prep",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "pl_Customer_Order_Report",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"folder": {
+			"name": "customer-Order"
+		},
+		"annotations": []
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"name": "super_Store_Raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_sql_storage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "raw",
+			"table": "super-store-details"
+		}
+	}
+}
