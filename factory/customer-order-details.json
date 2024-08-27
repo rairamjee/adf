@@ -1,0 +1,9 @@
+{
+	"name": "customer-order-details",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b7982a3b-2027-4fb6-a102-fbaaccfaba2c",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
